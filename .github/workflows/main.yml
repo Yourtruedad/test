@@ -15,8 +15,12 @@ jobs:
       run: echo Hello, world!
 
   deployment:
+  
     runs-on: ubuntu-latest
-    environment: production
+    
+    environment: prod
+    
     steps:
+      - uses: actions/checkout@v2
       - name: deploy
-        # ...deployment-specific steps
+        run: echo Build and deploy!
